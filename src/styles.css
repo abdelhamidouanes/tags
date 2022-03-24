@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --theme-color: #E63946;
+    font-family: 'Oxygen', sans-serif;
+}
+.pointer{
+    cursor: pointer;
+}
+.flex-spacebetween-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-start-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-sapcebetween-start{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.padding-10-15{
+    padding: 10px 15px;
+}
+.radius{
+    border-radius: 5px;
+}
+.theme-color{
+    color: var(--theme-color);
+}
+.unselectable{
+    user-select: none;
+}
+.one-input{
+    border: 1px solid black;
+}
+.input{
+    border: none;
+    width: 95%;
+}
+.input:focus-visible{
+    outline: none;
+}
+
+.btn{
+    background-color: var(--theme-color);
+    color: white;
+    border: 1px solid white;
+    width: 30%;
+}
+.btn:hover{
+    background-color: white;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+}
+.btn:active{
+    box-shadow: 0px 0px 10px 0px var(--theme-color);
+}
+
+
+.btn2{
+    background-color: white;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+    width: 30%;
+    box-shadow: 0px 0px 10px 0px var(--theme-color);
+}
+.btn2:hover{
+    background-color: var(--theme-color);
+    color: white;
+    border: 1px solid var(--theme-color);
+}
+.btn2:active{
+    box-shadow: none;
+}

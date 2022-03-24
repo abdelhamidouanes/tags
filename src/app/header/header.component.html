@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="flex-spacebetween-center" [ngClass]="{'margin-bottom': displayNewElement}">    
+        <form [formGroup]="searchForm">
+            <div class="search one-input flex-start-center padding-10-15 radius">
+                <input class="input margin-right" type="text" placeholder="Search" formControlName="toSearch" (keydown.enter)="onSearch()">
+                <i (click)="onSearch()" class="fas fa-search theme-color pointer"></i>
+            </div>
+        </form>
+        <div class="padding-10-15 radius pointer unselectable flex-center-center" 
+            [ngClass]="{'btn2': displayNewElement, 'btn': !displayNewElement}" 
+            (click)="onClickNewElement()">
+            New Element
+        </div>
+    </div>
+    <div [formGroup]="newElementForm" class="newElement" [ngClass]="{'display': displayNewElement, 'no-display': !displayNewElement}">
+        <div class="title-subtitle flex-spacebetween-center">
+            <div class="one-title-subtitle one-input flex-start-center padding-10-15 radius">
+                <i class="fas fa-space-shuttle theme-color"></i>
+                <input class="input margin-left" type="text" placeholder="Title" formControlName="title">
+            </div>
+            <div class="one-title-subtitle one-input flex-start-center padding-10-15 radius">
+                <i class="fas fa-closed-captioning theme-color"></i>
+                <input class="input margin-left" type="text" placeholder="Sub Title" formControlName="subtitle">
+            </div>
+        </div>
+        <div class="description one-input flex-start-center padding-10-15 radius">
+            <i class="fas fa-comment-medical theme-color"></i>
+            <input class="input margin-left" type="text" placeholder="Description" formControlName="description">
+        </div>
+        <div class="add-btn-container">
+            <div class="btn padding-10-15 radius pointer unselectable flex-center-center" (click)="onNewElement()">Add</div>
+        </div>
+    </div>
+</div>

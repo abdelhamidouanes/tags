@@ -1,0 +1,27 @@
+<div class="container ">
+    <div class="one-element flex-sapcebetween-start" *ngFor="let item of data; let i=index">
+        <div class="title-description-container">
+            <p>{{item.title}} - {{item.subTitle}}</p>
+            <p>{{item.description}}</p>
+            <div class="flex-start-center">
+                <div class="tags" *ngFor="let tag of item.tags">#{{tag}}</div>
+            </div>
+            <cdk-virtual-scroll-viewport itemSize="50" class="scroll-viewport">
+                <div *cdkVirtualFor="let item of item.tags" class="one-tag">{{item}}</div>
+            </cdk-virtual-scroll-viewport>
+        </div>
+        <div class="new-tag-container">
+            <div class="padding-10-15 radius pointer unselectable flex-center-center" id="new-tag" 
+            [ngClass]="{'btn2': displayNewTagForm(i), 'btn': !displayNewTagForm(i)}" 
+            (click)="showHideNewTagForm(i)">
+            New Tag</div>
+            <div class="new-tag-form" [formGroup]="tagForm" [ngClass]="{'display': displayNewTagForm(i), 'no-display' : !displayNewTagForm(i)}">
+                <div class="tag-input-container one-input flex-start-center padding-10-15 radius">
+                    <input class="input" type="text" placeholder="Tag" formControlName="tag" (keydown.enter)="onNewTag(i)">
+                </div>
+                <div class="btn padding-10-15 radius pointer unselectable flex-center-center" (click)="onNewTag(i)" id="add">Add</div>
+            </div>
+        </div>
+    </div>
+      
+</div>

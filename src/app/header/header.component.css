@@ -1,0 +1,51 @@
+.container{
+    padding: 50px;
+}
+
+form{
+    width: 100%;
+}
+
+.margin-bottom{
+    margin-bottom: 40px;
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+.margin-right{
+    margin-right: 10px;
+}
+
+.search{
+    width: 65%;
+}
+
+
+
+.newElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.title-subtitle, .description{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.one-title-subtitle{
+    width: 47%;
+}
+.add-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.display{
+    display: block;
+}
+.no-display{
+    display: none;
+}
